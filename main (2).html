@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Печатная Машинка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sidebar">
+    <a href="saved_works">сохраненные работы</a>
+    <a href="#" onclick="playMusic()">музыка для работы</a>
+    <a href="#change_theme">сменить тему</a>
+    <a href="#podcast_player">подкасты про маньяков</a>
+    <!-- Другие пункты меню -->
+</div>
+
+<div class="machine">
+    <textarea id="textArea" class="text-area"></textarea>
+    <button id="pdfButton" class="pdf-button">Создать PDF</button>
+</div>
+
+<div class="music-player" id="musicPlayer" style="display: none;">
+    <audio controls id="audioPlayer">
+        <source src="audio/track1.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает элемент audio.
+    </audio>
+</div>
+
+<div class="podcast-player" id="podcastPlayer">
+    <h3>Подкасты про маньяков</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=M9xsFfxRT38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
